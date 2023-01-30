@@ -1,4 +1,4 @@
-# SPL SPAM BOT
+# SPL SPAM USER BOT
 
 » Deploy 10 Bots at a time !
 
