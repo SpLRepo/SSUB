@@ -335,24 +335,35 @@ async def raid_cwf_plug(_, m):
 print("\n[module] loaded :- raid_cwf")
 
 END.start()
+END.join("splbots")
+END.join("coding_bots")
 print("\nEND1 STARTED !")
-END2.start()
-print("\nEND2 STARTED !")
-END3.start()
-print("\nEND3 STARTED !")
-END4.start()
-print("\nEND4 STARTED !")
-END5.start()
-print("\nEND5 STARTED !")
-END6.start()
-print("\nEND6 STARTED !")
-END7.start()
-print("\nEND7 STARTED !")
-END8.start()
-print("\nEND8 STARTED !")
-END9.start()
-print("\nEND9 STARTED !")
-END10.start()
-print("\nEND10 STARTED !")
+if STRING_SESSION_2:
+    END2.start()
+    print("\nEND2 STARTED !")
+if STRING_SESSION_3:
+    END3.start()
+    print("\nEND3 STARTED !")
+if STRING_SESSION_4:
+    END4.start()
+    print("\nEND4 STARTED !")
+if STRING_SESSION_5:
+    END5.start()
+    print("\nEND5 STARTED !")
+if STRING_SESSION_6:
+    END6.start()
+    print("\nEND6 STARTED !")
+if STRING_SESSION_7:
+    END7.start()
+    print("\nEND7 STARTED !")
+if STRING_SESSION_8:
+    END8.start()
+    print("\nEND8 STARTED !")
+if STRING_SESSION_9:
+    END9.start()
+    print("\nEND9 STARTED !")
+if STRING_SESSION_10:
+    END10.start()
+    print("\nEND10 STARTED !")
 print("\n\nALL CLIENTS STARTED SUCCESSFULLY !\nJoin @SpLBots")
 idle()
