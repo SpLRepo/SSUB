@@ -20,17 +20,25 @@ LEGEND = DEV.OWNER_ID
 if not STRING_SESSION:
     print("MAIN STRING NOT FOUND, ADD IT TO INITIATE !")
     sys.exit()
-END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN)
+END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION)
 if STRING_SESSION_2:
-    END2 = Client(":END2:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.STRING_SESSION_2)
-END3 = Client(":END3:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_3)
-END4 = Client(":END4:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_4)
-END5 = Client(":END5:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_5)
-END6 = Client(":END6:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_6)
-END7 = Client(":END7:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_7)
-END8 = Client(":END8:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_8)
-END9 = Client(":END9:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_9)
-END10 = Client(":END10:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_10)
+    END2 = Client(":END2:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_2)
+if STRING_SESSION_3:
+    END3 = Client(":END3:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_3)
+if STRING_SESSION_4:
+    END4 = Client(":END4:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_4)
+if STRING_SESSION_5:
+    END5 = Client(":END5:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_5)
+if STRING_SESSION_6:
+    END6 = Client(":END6:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_6)
+if STRING_SESSION_7:
+    END7 = Client(":END7:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_7)
+if STRING_SESSION_8:
+    END8 = Client(":END8:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_8)
+if STRING_SESSION_9:
+    END9 = Client(":END9:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_9)
+if STRING_SESSION_10:
+    END10 = Client(":END10:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_10)
 
 @END.on_message(filters.command("help", hl))
 @END2.on_message(filters.command("help", hl))
