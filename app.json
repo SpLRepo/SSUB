@@ -1,6 +1,6 @@
 {
-  "name": "Spam Bot By Hades Network !",
-  "description": "Pyrogram based Spam by Hades !",
+  "name": "Spam User Bot By SpL Network !",
+  "description": "Pyrogram based User Spam by SpL !",
   "logo": "https://te.legra.ph/file/2f370ea06233326280613.jpg",
   "keywords": [
     "telegram",
@@ -37,52 +37,52 @@
       "required": true,
       "value": ""
     },
-    "BOT_TOKEN": {
+    "STRING_SESSION": {
       "description": "Obtain a Telegram bot token by contacting @BotFather",
       "required": true,
       "value": ""
     },
-    "BOT_TOKEN_2": {
+    "STRING_SESSION_2": {
       "description": "Obtain a Telegram bot token by contacting @BotFather",
       "required": true,
       "value": ""
     },
-    "BOT_TOKEN_3": {
+    "STRING_SESSION_3": {
       "description": "Obtain a Telegram bot token by contacting @BotFather",
       "required": true,
       "value": ""
     },
-    "BOT_TOKEN_4": {
+    "STRING_SESSION_4": {
       "description": "Obtain a Telegram bot token by contacting @BotFather",
       "required": true,
       "value": ""
     },
-    "BOT_TOKEN_5": {
+    "STRING_SESSION_5": {
       "description": "Obtain a Telegram bot token by contacting @BotFather",
       "required": true,
       "value": ""
     },
-    "BOT_TOKEN_6": {
+    "STRING_SESSION_6": {
       "description": "Obtain a Telegram bot token by contacting @BotFather",
       "required": true,
       "value": ""
     },
-    "BOT_TOKEN_7": {
+    "STRING_SESSION_7": {
       "description": "Obtain a Telegram bot token by contacting @BotFather",
       "required": true,
       "value": ""
     },
-    "BOT_TOKEN_8": {
+    "STRING_SESSION_8": {
       "description": "Obtain a Telegram bot token by contacting @BotFather",
       "required": true,
       "value": ""
     },
-    "BOT_TOKEN_9": {
+    "STRING_SESSION_9": {
       "description": "Obtain a Telegram bot token by contacting @BotFather",
       "required": true,
       "value": ""
     },
-    "BOT_TOKEN_10": {
+    "STRING_SESSION_10": {
       "description": "Obtain a Telegram bot token by contacting @BotFather",
       "required": true,
       "value": ""
