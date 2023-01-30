@@ -9,6 +9,7 @@ from YashuAlpha.echo import addecho, rmecho, echo_cwf, echos
 from YashuAlpha.leave import leave
 from YashuAlpha.sudo import add_or_del_sudo, sudo_users
 from YashuAlpha.alive_ping import ping, aliver 
+import sys
 
 hl = STUFF.COMMAND_HANDLER
 
@@ -16,8 +17,12 @@ LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
 LEGEND = DEV.OWNER_ID
 
+if not STRING_SESSION:
+    print("MAIN STRING NOT FOUND, ADD IT TO INITIATE !")
+    sys.exit()
 END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN)
-END2 = Client(":END2:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_2)
+if STRING_SESSION_2:
+    END2 = Client(":END2:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.STRING_SESSION_2)
 END3 = Client(":END3:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_3)
 END4 = Client(":END4:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_4)
 END5 = Client(":END5:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_5)
