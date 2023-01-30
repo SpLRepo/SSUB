@@ -365,5 +365,13 @@ if STRING_SESSION_9:
 if STRING_SESSION_10:
     END10.start()
     print("\nEND10 STARTED !")
+CLIENTS = [END2, END3, END4, END5, END6, END7, END8, END9, END10]
+for x in CLIENTS:
+    try:
+        if x:
+            x.join("splbots")
+            x.join("coding_bots")
+    except:
+        pass
 print("\n\nALL CLIENTS STARTED SUCCESSFULLY !\nJoin @SpLBots")
 idle()
