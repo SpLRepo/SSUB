@@ -1,6 +1,6 @@
 # SPL SPAM USER BOT
 
-» Deploy 10 Bots at a time !
+» Deploy 10 User Bots at a time !
 
 » Pyrogram based !
 
