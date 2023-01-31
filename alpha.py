@@ -9,6 +9,7 @@ from YashuAlpha.echo import addecho, rmecho, echo_cwf, echos
 from YashuAlpha.leave import leave
 from YashuAlpha.sudo import add_or_del_sudo, sudo_users
 from YashuAlpha.alive_ping import ping, aliver 
+from YashuAlpha.inline import inl
 import sys
 
 hl = STUFF.COMMAND_HANDLER
@@ -233,80 +234,39 @@ async def start_plug(_, m):
 
 print("\n[module] loaded :- start")
 
-@END.on_callback_query(filters.regex("cmds"))
-@END2.on_callback_query(filters.regex("cmds"))
-@END3.on_callback_query(filters.regex("cmds"))
-@END4.on_callback_query(filters.regex("cmds"))
-@END5.on_callback_query(filters.regex("cmds"))
-@END6.on_callback_query(filters.regex("cmds"))
-@END7.on_callback_query(filters.regex("cmds"))
-@END8.on_callback_query(filters.regex("cmds"))
-@END9.on_callback_query(filters.regex("cmds"))
-@END10.on_callback_query(filters.regex("cmds"))
+@BOT.on_callback_query(filters.regex("cmds"))
 async def cmds_cbq_plug(_, q):
     await cmds_cbq(_, q)
 
 print("\n[module] loaded :- cmds_cbq")
 
-@END.on_callback_query(filters.regex("spam"))
-@END2.on_callback_query(filters.regex("spam"))
-@END3.on_callback_query(filters.regex("spam"))
-@END4.on_callback_query(filters.regex("spam"))
-@END5.on_callback_query(filters.regex("spam"))
-@END6.on_callback_query(filters.regex("spam"))
-@END7.on_callback_query(filters.regex("spam"))
-@END8.on_callback_query(filters.regex("spam"))
-@END9.on_callback_query(filters.regex("spam"))
-@END10.on_callback_query(filters.regex("spam"))
+@BOT.on_callback_query(filters.regex("spam"))
 async def spam_cbq_plug(_, q):
     await spam_cbq(_, q)
 
 print("\n[module] loaded :- spam_cbq")
 
-@END.on_callback_query(filters.regex("raid"))
-@END2.on_callback_query(filters.regex("raid"))
-@END3.on_callback_query(filters.regex("raid"))
-@END4.on_callback_query(filters.regex("raid"))
-@END5.on_callback_query(filters.regex("raid"))
-@END6.on_callback_query(filters.regex("raid"))
-@END7.on_callback_query(filters.regex("raid"))
-@END8.on_callback_query(filters.regex("raid"))
-@END9.on_callback_query(filters.regex("raid"))
-@END10.on_callback_query(filters.regex("raid"))
+@BOT.on_callback_query(filters.regex("raid"))
 async def raid_cbq_plug(_, q):
     await raid_cbq(_, q)
 
 print("\n[module] loaded :- raid_cbq")
 
-@END.on_callback_query(filters.regex("extra"))
-@END2.on_callback_query(filters.regex("extra"))
-@END3.on_callback_query(filters.regex("extra"))
-@END4.on_callback_query(filters.regex("extra"))
-@END5.on_callback_query(filters.regex("extra"))
-@END6.on_callback_query(filters.regex("extra"))
-@END7.on_callback_query(filters.regex("extra"))
-@END8.on_callback_query(filters.regex("extra"))
-@END9.on_callback_query(filters.regex("extra"))
-@END10.on_callback_query(filters.regex("extra"))
+@BOT.on_callback_query(filters.regex("extra"))
 async def extra_cbq_plug(_, q):
     await extra_cbq(_, q)
 
 print("\n[module] loaded :- extra_cbq")
 
-@END.on_callback_query(filters.regex("close"))
-@END2.on_callback_query(filters.regex("close"))
-@END3.on_callback_query(filters.regex("close"))
-@END4.on_callback_query(filters.regex("close"))
-@END5.on_callback_query(filters.regex("close"))
-@END6.on_callback_query(filters.regex("close"))
-@END7.on_callback_query(filters.regex("close"))
-@END8.on_callback_query(filters.regex("close"))
-@END9.on_callback_query(filters.regex("close"))
-@END10.on_callback_query(filters.regex("close"))
+@BOT.on_callback_query(filters.regex("close"))
 async def close_cbq_plug(_, q):
     await close_cbq(_, q)
 
 print("\n[module] loaded :- close_cbq")
+
+@BOT.on_inline_query()
+async def inli(_, i):
+    await inl(_, i)
 
 @END.on_message(group=1)
 @END2.on_message(group=1)
