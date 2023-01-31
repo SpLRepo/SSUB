@@ -2,6 +2,7 @@ import time
 from . import startTime
 from config import STUFF, DEV
 from .verify import verify
+from pyrogram import Client, filters
 
 PIC = STUFF.ALIVE_PIC if STUFF.ALIVE_PIC else "https://telegra.ph/file/31f1906a790ec93ace4e2.jpg"
 
@@ -57,6 +58,7 @@ def grt(seconds: int) -> str:
     ping_time += ":".join(time_list)
     return ping_time
 
+@Client.on_message(filters.command("ping", hl))
 async def ping(_, m):
     if not await verify(m.from_user.id):
         return
@@ -72,6 +74,7 @@ async def ping(_, m):
     xD += f"✥ 𝙐𝙗 𝘿𝙚𝙫 :- [𝚂𝙿𝙻](t.me/SpLBots)\n"
     return await ok.edit(TEXT.format(pong, men))
 
+@Client.on_message(filters.command("alive", hl))
 async def aliver(_, m):
     if not await verify(m.from_user.id):
         return
