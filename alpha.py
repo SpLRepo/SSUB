@@ -34,35 +34,35 @@ else:
 if TOKENS.STRING_SESSION_3:
     END3 = Client(":END3:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_3)
 else:
-    END3 = None
+    END3 = Alpha()
 if TOKENS.STRING_SESSION_4:
     END4 = Client(":END4:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_4)
 else:
-    END4 = None 
+    END4 = Alpha() 
 if TOKENS.STRING_SESSION_5:
     END5 = Client(":END5:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_5)
 else:
-    END5 = None
+    END5 = Alpha()
 if TOKENS.STRING_SESSION_6:
     END6 = Client(":END6:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_6)
 else:
-    END6 = None
+    END6 = Alpha()
 if TOKENS.STRING_SESSION_7:
     END7 = Client(":END7:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_7)
 else:
-    END7 = None
+    END7 = Alpha()
 if TOKENS.STRING_SESSION_8:
     END8 = Client(":END8:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_8)
 else:
-    END8 = None
+    END8 = Alpha()
 if TOKENS.STRING_SESSION_9:
     END9 = Client(":END9:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_9)
 else:
-    END9 = None
+    END9 = Alpha()
 if TOKENS.STRING_SESSION_10:
     END10 = Client(":END10:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_10)
 else:
-    END10 = None
+    END10 = Alpha()
 
 @END.on_message(filters.command("help", hl))
 @END2.on_message(filters.command("help", hl))
@@ -315,31 +315,31 @@ END.start()
 END.join("splbots")
 END.join("coding_bots")
 print("\nEND1 STARTED !")
-if END2:
+if TOKENS.STRING_SESSION_2:
     END2.start()
     print("\nEND2 STARTED !")
-if END3:
+if TOKENS.STRING_SESSION_3:
     END3.start()
     print("\nEND3 STARTED !")
-if END4:
+if TOKENS.STRING_SESSION_4:
     END4.start()
     print("\nEND4 STARTED !")
-if END5:
+if TOKENS.STRING_SESSION_5:
     END5.start()
     print("\nEND5 STARTED !")
-if END6:
+if TOKENS.STRING_SESSION_6:
     END6.start()
     print("\nEND6 STARTED !")
-if END7:
+if TOKENS.STRING_SESSION_7:
     END7.start()
     print("\nEND7 STARTED !")
-if END8:
+if TOKENS.STRING_SESSION_8:
     END8.start()
     print("\nEND8 STARTED !")
-if END9:
+if TOKENS.STRING_SESSION_9:
     END9.start()
     print("\nEND9 STARTED !")
-if END10:
+if TOKENS.STRING_SESSION_10:
     END10.start()
     print("\nEND10 STARTED !")
 CLIENTS = [END2, END3, END4, END5, END6, END7, END8, END9, END10]
