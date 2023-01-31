@@ -16,11 +16,11 @@ import sys
 from external_client import BOT
 from alphagram import Alpha
 
-hl = STUFF.COMMAND_HANDLER
+#hl = STUFF.COMMAND_HANDLER
 
-LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
+#LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
-LEGEND = DEV.OWNER_ID
+#LEGEND = DEV.OWNER_ID
 
 if not BOT:
     print("BOT TOKEN NOT FOUND, ADD IT TO INITIATE !")
