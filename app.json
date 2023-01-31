@@ -11,21 +11,7 @@
     "buildpacks": [{
     "url": "heroku/python"
   }],
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
-    }
-  },
-  "addons": [
-      {
-         "options": {
-            "version": "12"
-         },
-         "plan": "heroku-postgresql"
-      }
-   ],
-  "repository": "https://github.com/Timeisnotwaiting/HadesAfk",
+  "repository": "https://github.com/NotKeshav/SpLSpamUserBot",
   "env": {
     "API_ID": {
       "description": "Get this value from my.telegram.org.",
