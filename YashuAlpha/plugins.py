@@ -80,11 +80,6 @@ Command :
 1) {hl}raid <count> <username
 2) {hl}raid <count> <reply to user>
 
-**DelayRaid :** Activates Raid on Any individual User For Given Range.
-Command :
-1) {hl}delayraid <delay> <count> <Username of User>
-2) {hl}delayraid <delay> <count> <reply to a User>
-
 **ReplyRaid :** Activates Reply Raid on The User!!
 Command :
 1) {hl}replyraid <replying to user>
@@ -112,10 +107,15 @@ Command :
 1) {hl}addecho <reply to user>
 2) {hl}rmecho <reply to user>
 
-**Leave :** To Leave Group/Channel
+**Leave:** To Leave Group/Channel
 Command :
 1) {hl}leave <group/chat id>
 2) {hl}leave : Type in the Group bot will auto leave that group
+
+**Join:** To Leave Group/Channel
+Command :
+1) {hl}Join <group/chat id>
+2) {hl}Join : Type in the Group bots will join that group.
 
 **© @NotKeshav**
 """
