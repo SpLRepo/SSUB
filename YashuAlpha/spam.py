@@ -2,6 +2,7 @@ from .data import KeshavX, GROUP
 from config import STUFF
 import asyncio
 from .verify import verify
+from pyrogram import Client, filters
 
 hl = STUFF.COMMAND_HANDLER
 
@@ -40,6 +41,7 @@ async def get_reply_and_args(m):
             type += "-caption"
     return type, args
 
+@Client.on_message(filters.command("spam", hl))
 async def spam_func(_, m):
     if not await verify(m.from_user.id):
         return
@@ -132,6 +134,7 @@ async def spam_func(_, m):
     STOP = True
     SPAM = False
 
+@Client.on_message(filters.command(["dspam", "delayspam"], hl))
 async def dspam_func(_, m):
     if not await verify(m.from_user.id):
         return
@@ -235,6 +238,7 @@ async def dspam_func(_, m):
     STOP = True
     SPAM = False
 
+@Client.on_message(filters.command("stop", hl))
 async def spam_stop(_, m):
     if not await verify(m.from_user.id):
         return
