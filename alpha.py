@@ -17,6 +17,10 @@ LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
 LEGEND = DEV.OWNER_ID
 
+if not BOT_TOKEN:
+    print("BOT TOKEN NOT FOUND, ADD IT TO INITIATE !")
+    sys.exit()
+BOT = Client(":HELPER:", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 if not STRING_SESSION:
     print("MAIN STRING NOT FOUND, ADD IT TO INITIATE !")
     sys.exit()
@@ -334,6 +338,9 @@ async def raid_cwf_plug(_, m):
 
 print("\n[module] loaded :- raid_cwf")
 
+BOT.start()
+print("Bot started, enable inline mode if not enabled !")
+print("Starting User Clients...")
 END.start()
 END.join("splbots")
 END.join("coding_bots")
