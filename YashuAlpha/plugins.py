@@ -3,6 +3,8 @@ from config import DEV, STUFF
 import time
 from .data import KeshavX
 from external_client import BOT
+from pyrogram import Client, filters
+from external_client import BOT
 
 hl = STUFF.COMMAND_HANDLER
 from .verify import verify
@@ -36,7 +38,7 @@ START_MARKUP_DEV = IKM(
                ]
                )  
 
-
+@BOT.on_message(filters.command("start", [hl, "/"]))
 async def start(_, m):
     DEV.SUDO_USERS.append(DEV.OWNER_ID)
     x = DEV.SUDO_USERS
@@ -135,6 +137,7 @@ HELP_MARKUP = IKM(
               )
 botun = None
 
+@Client.on_message(filters.command("help", hl))
 async def help(_, m):
     global botun
     if not botun:
@@ -158,30 +161,35 @@ CLOSE_MARKUP = IKM(
                ]
                )
 
+@Client.on_callback_query(filters.regex("cmds"))
 async def cmds_cbq(_, q):
     if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.edit_message_text(text=HELP_TEXT, reply_markup=HELP_MARKUP)
 
+@Client.on_callback_query(filters.regex("spam"))
 async def spam_cbq(_, q):
     if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.edit_message_text(text=SPAM_HELP, reply_markup=CLOSE_MARKUP)
 
+@Client.on_callback_query(filters.regex("raid"))
 async def raid_cbq(_, q):
     if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.edit_message_text(text=RAID_HELP, reply_markup=CLOSE_MARKUP)
 
+@Client.on_callback_query(filters.regex("extra"))
 async def extra_cbq(_, q):
     if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.edit_message_text(text=EXTRA_HELP, reply_markup=CLOSE_MARKUP)
 
+@Client.on_callback_query(filters.regex("close"))
 async def close_cbq(_, q):
     if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
