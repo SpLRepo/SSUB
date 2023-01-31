@@ -26,43 +26,43 @@ if not BOT:
 if not TOKENS.STRING_SESSION:
     print("MAIN STRING NOT FOUND, ADD IT TO INITIATE !")
     sys.exit()
-END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION)
+END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION, plugins=dict(root="YashuAlpha"))
 if TOKENS.STRING_SESSION_2:
-    END2 = Client(":END2:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_2)
+    END2 = Client(":END2:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_2, plugins=dict(root="YashuAlpha"))
 else:
-    END2 = Alpha()
+    END2 = None
 if TOKENS.STRING_SESSION_3:
-    END3 = Client(":END3:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_3)
+    END3 = Client(":END3:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_3, plugins=dict(root="YashuAlpha"))
 else:
-    END3 = Alpha()
+    END3 = None
 if TOKENS.STRING_SESSION_4:
-    END4 = Client(":END4:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_4)
+    END4 = Client(":END4:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_4, plugins=dict(root="YashuAlpha"))
 else:
-    END4 = Alpha() 
+    END4 = None
 if TOKENS.STRING_SESSION_5:
-    END5 = Client(":END5:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_5)
+    END5 = Client(":END5:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_5, plugins=dict(root="YashuAlpha"))
 else:
-    END5 = Alpha()
+    END5 = None
 if TOKENS.STRING_SESSION_6:
-    END6 = Client(":END6:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_6)
+    END6 = Client(":END6:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_6, plugins=dict(root="YashuAlpha"))
 else:
-    END6 = Alpha()
+    END6 = None
 if TOKENS.STRING_SESSION_7:
-    END7 = Client(":END7:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_7)
+    END7 = Client(":END7:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_7, plugins=dict(root="YashuAlpha"))
 else:
-    END7 = Alpha()
+    END7 = None
 if TOKENS.STRING_SESSION_8:
-    END8 = Client(":END8:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_8)
+    END8 = Client(":END8:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_8, plugins=dict(root="YashuAlpha"))
 else:
-    END8 = Alpha()
+    END8 = None
 if TOKENS.STRING_SESSION_9:
-    END9 = Client(":END9:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_9)
+    END9 = Client(":END9:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_9, plugins=dict(root="YashuAlpha"))
 else:
-    END9 = Alpha()
+    END9 = None
 if TOKENS.STRING_SESSION_10:
-    END10 = Client(":END10:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_10)
+    END10 = Client(":END10:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_10, plugins=dict(root="YashuAlpha"))
 else:
-    END10 = Alpha()
+    END10 = None
 
 @END.on_message(filters.command("help", hl))
 @END2.on_message(filters.command("help", hl))
