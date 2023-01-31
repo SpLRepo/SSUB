@@ -12,6 +12,7 @@ from YashuAlpha.alive_ping import ping, aliver
 from YashuAlpha.inline import inl
 import sys
 from external_client import BOT
+from alphagram import Alpha
 
 hl = STUFF.COMMAND_HANDLER
 
@@ -29,7 +30,7 @@ END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=T
 if TOKENS.STRING_SESSION_2:
     END2 = Client(":END2:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_2)
 else:
-    END2 = None
+    END2 = Alpha()
 if TOKENS.STRING_SESSION_3:
     END3 = Client(":END3:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_3)
 else:
