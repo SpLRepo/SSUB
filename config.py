@@ -5,6 +5,7 @@ class API:
     API_HASH = os.environ["API_HASH"]
 
 class TOKENS:
+    BOT_TOKEN = os.environ["BOT_TOKEN"]
     STRING_SESSION = os.environ["STRING_SESSION"]
     STRING_SESSION_2 = os.environ["STRING_SESSION_2"]
     STRING_SESSION_3 = os.environ["STRING_SESSION_3"]
