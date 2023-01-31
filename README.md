@@ -16,7 +16,7 @@
 
 ## REQUIREMENTS
 
-» 10 Bot Tokens, Get it from [BotFather](https://t.me/BOTFATHER)
+» 1-10 Pyrogram Sessions, Get it from [here](https://t.me/Coding_Bots/3404)
 
 » Mongo DB URI, Get it from [Mongo](www.mongodb.com)
 
@@ -26,7 +26,7 @@
 
 » Open config.py
 
-» Fill Bot Tokens, API, Owner ID, Sudo Users, Mongo Url
+» Fill Bot Token, Strings Session(s), API, Owner ID, Sudo Users, Mongo Url
 
 » Copy your repo link.
 
