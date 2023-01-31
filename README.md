@@ -16,6 +16,8 @@
 
 ## REQUIREMENTS
 
+» A Bot Token, Get it from [here](t.me/BOTFATHER)
+
 » 1-10 Pyrogram Sessions, Get it from [here](https://t.me/Coding_Bots/3404)
 
 » Mongo DB URI, Get it from [Mongo](www.mongodb.com)
