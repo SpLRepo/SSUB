@@ -148,7 +148,7 @@ async def help(_, m):
     try:
         nice = await _.get_inline_bot_results(bot=botun, query="inline_help")
     except Exception as e:
-        await m.reply(e)
+        return await m.reply(e)
     try:
         await ok.delete()
         await m.delete()
@@ -164,35 +164,35 @@ CLOSE_MARKUP = IKM(
                ]
                )
 
-@Client.on_callback_query(filters.regex("cmds"))
+@BOT.on_callback_query(filters.regex("cmds"))
 async def cmds_cbq(_, q):
     if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.edit_message_text(text=HELP_TEXT, reply_markup=HELP_MARKUP)
 
-@Client.on_callback_query(filters.regex("spam"))
+@BOT.on_callback_query(filters.regex("spam"))
 async def spam_cbq(_, q):
     if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.edit_message_text(text=SPAM_HELP, reply_markup=CLOSE_MARKUP)
 
-@Client.on_callback_query(filters.regex("raid"))
+@BOT.on_callback_query(filters.regex("raid"))
 async def raid_cbq(_, q):
     if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.edit_message_text(text=RAID_HELP, reply_markup=CLOSE_MARKUP)
 
-@Client.on_callback_query(filters.regex("extra"))
+@BOT.on_callback_query(filters.regex("extra"))
 async def extra_cbq(_, q):
     if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.edit_message_text(text=EXTRA_HELP, reply_markup=CLOSE_MARKUP)
 
-@Client.on_callback_query(filters.regex("close"))
+@BOT.on_callback_query(filters.regex("close"))
 async def close_cbq(_, q):
     if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
