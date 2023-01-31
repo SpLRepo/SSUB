@@ -154,7 +154,10 @@ async def help(_, m):
         await m.delete()
     except:
         pass
-    await _.send_inline_bot_result(m.chat.id, nice.query_id, nice.results[0].id)
+    try:
+        await _.send_inline_bot_result(m.chat.id, nice.query_id, nice.results[0].id)
+    except Exception as e:
+        await m.reply(e)
 
 CLOSE_MARKUP = IKM(
                [
