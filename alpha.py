@@ -28,22 +28,40 @@ if not TOKENS.STRING_SESSION:
 END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION)
 if TOKENS.STRING_SESSION_2:
     END2 = Client(":END2:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_2)
+else:
+    END2 = None
 if TOKENS.STRING_SESSION_3:
     END3 = Client(":END3:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_3)
+else:
+    END3 = None
 if TOKENS.STRING_SESSION_4:
     END4 = Client(":END4:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_4)
+else:
+    END4 = None 
 if TOKENS.STRING_SESSION_5:
     END5 = Client(":END5:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_5)
+else:
+    END5 = None
 if TOKENS.STRING_SESSION_6:
     END6 = Client(":END6:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_6)
+else:
+    END6 = None
 if TOKENS.STRING_SESSION_7:
     END7 = Client(":END7:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_7)
+else:
+    END7 = None
 if TOKENS.STRING_SESSION_8:
     END8 = Client(":END8:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_8)
+else:
+    END8 = None
 if TOKENS.STRING_SESSION_9:
     END9 = Client(":END9:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_9)
+else:
+    END9 = None
 if TOKENS.STRING_SESSION_10:
     END10 = Client(":END10:", api_id=API.API_ID, api_hash=API.API_HASH, session_string=TOKENS.STRING_SESSION_10)
+else:
+    END10 = None
 
 @END.on_message(filters.command("help", hl))
 @END2.on_message(filters.command("help", hl))
