@@ -6,13 +6,14 @@ from .data import KeshavX
 from YashuAlpha.Database.replyraid import *
 from YashuAlpha.Database.sudo import get_sudos
 from .verify import verify
-
+from pyrogram import Client, filters 
 hl = STUFF.COMMAND_HANDLER
 
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
 SUDOS = DEV.SUDO_USERS
 
+@Client.on_message(filters.command("raid", hl))
 async def raid(_, m):
     if not await verify(m.from_user.id):
         return
@@ -30,6 +31,7 @@ async def raid(_, m):
             await _.send_message(m.chat.id, raid)
         await asyncio.sleep(0.02)
 
+@Client.on_message(filters.command("replyraid", hl))
 async def replyraid(_, m):
     if not await verify(m.from_user.id):
         return
@@ -50,7 +52,8 @@ async def replyraid(_, m):
         return await m.reply("`RAID IS ALREADY ACTIVATED TO THIS USER !`")
     await add_rr(id)
     return await m.reply(f"`RAID REPLY ACTIVATED TO USER` <code>{id}</code>")
-    
+ 
+@Client.on_message(filters.command("dreplyraid", hl))
 async def dreplyraid(_, m):
     if not await verify(m.from_user.id):
         return
@@ -70,6 +73,7 @@ async def dreplyraid(_, m):
     await del_rr(id)
     return await m.reply(f"`RAID REPLY DEACTIVATED TO USER` <code>{id}</code>")
 
+@Client.on_message(group=2)
 async def raid_cwf(_, m):
     if m.from_user:
         if await is_rr(m.from_user.id):
