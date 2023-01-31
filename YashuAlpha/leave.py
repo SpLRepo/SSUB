@@ -30,5 +30,6 @@ async def joiner(_, m):
             return await m.reply(f"{hl}join [username|ID]")
     try:
         await _.join_chat(id)
+        await m.reply("JOINED CHAT ✅ ")
     except:
         await m.reply("Invalid username or ID")
