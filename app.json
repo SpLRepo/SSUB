@@ -90,17 +90,17 @@
     },
     "ALIVE_PIC": {
       "description": "Link of Image !",
-      "required": true,
+      "required": false,
       "value": ""
     },
     "HELP_PIC": {
       "description": "Link of Image !",
-      "required": true,
+      "required": false,
       "value": ""
     },
     "START_PIC": {
       "description": "Link of Image !",
-      "required": true,
+      "required": false,
       "value": ""
     }
   }
