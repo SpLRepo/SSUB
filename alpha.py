@@ -11,7 +11,7 @@ from YashuAlpha.sudo import add_or_del_sudo, sudo_users
 from YashuAlpha.alive_ping import ping, aliver 
 from YashuAlpha.inline import inl
 import sys
-from .external_client import BOT
+from external_client import BOT
 
 hl = STUFF.COMMAND_HANDLER
 
