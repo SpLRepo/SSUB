@@ -145,7 +145,10 @@ async def help(_, m):
     if not await verify(m.from_user.id):
         return
     ok = await m.reply(" 🇮🇳 ")
-    nice = await _.get_inline_bot_results(bot=un, query="inline_help")
+    try:
+        nice = await _.get_inline_bot_results(bot=botun, query="inline_help")
+    except Exception as e:
+        await m.reply(e)
     try:
         await ok.delete()
         await m.delete()
