@@ -1,10 +1,12 @@
 
 from pyrogram.types import InlineQueryResultPhoto as IQRP
-from config import HELP_PIC
+from config import STUFF
 from .plugins import SPARE, HELP_TEXT, HELP_MARKUP
 
-if not HELP_PIC:
+if not STUFF.HELP_PIC:
     HELP_PIC = SPARE
+else:
+    HELP_PIC = STUFF.HELP_PIC
 
 ans = [IQRP(photo_url=HELP_PIC, thumb_url=SPARE, title="Help", description="Help Module [SPL-UB]", caption=HELP_TEXT, reply_markup=HELP_MARKUP)]
 
