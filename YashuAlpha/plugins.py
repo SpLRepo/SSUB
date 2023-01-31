@@ -2,6 +2,7 @@ from pyrogram.types import InlineKeyboardButton as IKB, InlineKeyboardMarkup as 
 from config import DEV, STUFF
 import time
 from .data import KeshavX
+from external_client import BOT
 
 hl = STUFF.COMMAND_HANDLER
 from .verify import verify
@@ -132,12 +133,22 @@ HELP_MARKUP = IKM(
               ]
               ]
               )
+botun = None
 
 async def help(_, m):
+    global botun
+    if not botun:
+        botun = (await BOT.get_me()).username
     if not await verify(m.from_user.id):
         return
-    await m.reply_photo(HELP_PIC, caption=HELP_TEXT, reply_markup=HELP_MARKUP)
-    return
+    ok = await m.reply(" 🇮🇳 ")
+    nice = await _.get_inline_bot_results(bot=un, query="inline_help")
+    try:
+        await ok.delete()
+        await m.delete()
+    except:
+        pass
+    await _.send_inline_bot_result(m.chat.id, nice.query_id, nice.results[0].id)
 
 CLOSE_MARKUP = IKM(
                [
