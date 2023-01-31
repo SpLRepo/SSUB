@@ -11,6 +11,7 @@ from YashuAlpha.sudo import add_or_del_sudo, sudo_users
 from YashuAlpha.alive_ping import ping, aliver 
 from YashuAlpha.inline import inl
 import sys
+from .external_client import BOT
 
 hl = STUFF.COMMAND_HANDLER
 
@@ -18,10 +19,9 @@ LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
 LEGEND = DEV.OWNER_ID
 
-if not BOT_TOKEN:
+if not BOT:
     print("BOT TOKEN NOT FOUND, ADD IT TO INITIATE !")
     sys.exit()
-BOT = Client(":HELPER:", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 if not STRING_SESSION:
     print("MAIN STRING NOT FOUND, ADD IT TO INITIATE !")
     sys.exit()
@@ -219,16 +219,7 @@ async def leave_plug(_, m):
 
 print("\n[module] loaded :- leave")
 
-@END.on_message(filters.command("start", [hl, "/"]))
-@END2.on_message(filters.command("start", [hl, "/"]))
-@END3.on_message(filters.command("start", [hl, "/"]))
-@END4.on_message(filters.command("start", [hl, "/"]))
-@END5.on_message(filters.command("start", [hl, "/"]))
-@END6.on_message(filters.command("start", [hl, "/"]))
-@END7.on_message(filters.command("start", [hl, "/"]))
-@END8.on_message(filters.command("start", [hl, "/"]))
-@END9.on_message(filters.command("start", [hl, "/"]))
-@END10.on_message(filters.command("start", [hl, "/"]))
+@BOT.on_message(filters.command("start", [hl, "/"]))
 async def start_plug(_, m):
     await start(_, m)
 
