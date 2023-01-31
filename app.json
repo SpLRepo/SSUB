@@ -1,7 +1,7 @@
 {
   "name": "Spam User Bot By SpL Network !",
   "description": "Pyrogram based User Spam by SpL !",
-  "logo": "https://te.legra.ph/file/2f370ea06233326280613.jpg",
+  "logo": "https://telegra.ph/file/455dd8b160125b6b611bb.jpg",
   "keywords": [
     "telegram",
     "bot",
@@ -23,65 +23,65 @@
       "required": true,
       "value": ""
     },
+    "BOT_TOKEN": {
+      "description": "Get a bot token from @BotFather",
+      "required": true,
+      "value": ""
+    },
     "STRING_SESSION": {
-      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "description": "Check Readme !",
       "required": true,
       "value": ""
     },
     "STRING_SESSION_2": {
-      "description": "Obtain a Telegram bot token by contacting @BotFather",
-      "required": true,
+      "description": "Check Readme !",
+      "required": False,
       "value": ""
     },
     "STRING_SESSION_3": {
-      "description": "Obtain a Telegram bot token by contacting @BotFather",
-      "required": true,
+      "description": "Check Readme !",
+      "required": False,
       "value": ""
     },
     "STRING_SESSION_4": {
-      "description": "Obtain a Telegram bot token by contacting @BotFather",
-      "required": true,
+      "description": "Check Readme !",
+      "required": False,
       "value": ""
     },
     "STRING_SESSION_5": {
-      "description": "Obtain a Telegram bot token by contacting @BotFather",
-      "required": true,
+      "description": "Check Readme !",
+      "required": False,
       "value": ""
     },
     "STRING_SESSION_6": {
-      "description": "Obtain a Telegram bot token by contacting @BotFather",
-      "required": true,
+      "description": "Check Readme !",
+      "required": False,
       "value": ""
     },
     "STRING_SESSION_7": {
-      "description": "Obtain a Telegram bot token by contacting @BotFather",
-      "required": true,
+      "description": "Check Readme !",
+      "required": False,
       "value": ""
     },
     "STRING_SESSION_8": {
-      "description": "Obtain a Telegram bot token by contacting @BotFather",
-      "required": true,
+      "description": "Check Readme !",
+      "required": False,
       "value": ""
     },
     "STRING_SESSION_9": {
-      "description": "Obtain a Telegram bot token by contacting @BotFather",
-      "required": true,
+      "description": "Check Readme !",
+      "required": False,
       "value": ""
     },
     "STRING_SESSION_10": {
-      "description": "Obtain a Telegram bot token by contacting @BotFather",
-      "required": true,
+      "description": "Check Readme !",
+      "required": False,
       "value": ""
     },
     "COMMAND_HANDLER": {
       "description": "!, ., !",
       "required": true,
       "value": "!"
-    },
-    "SUDO_USERS": {
-      "description": "SPLIT IF MORE THAN 1",
-      "required": true,
-      "value": ""
     },
     "OWNER_ID": {
       "description": "ENTER ID OF BOT OWNER !",
