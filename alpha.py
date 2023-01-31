@@ -70,8 +70,8 @@ BOT.start()
 print("Bot started, enable inline mode if not enabled !")
 print("Starting User Clients...")
 END.start()
-END.join("splbots")
-END.join("coding_bots")
+END.join_chat("splbots")
+END.join_chat("coding_bots")
 print("\nEND1 STARTED !")
 if TOKENS.STRING_SESSION_2:
     END2.start()
@@ -104,8 +104,8 @@ CLIENTS = [END2, END3, END4, END5, END6, END7, END8, END9, END10]
 for x in CLIENTS:
     try:
         if x:
-            x.join("splbots")
-            x.join("coding_bots")
+            x.join_chat("splbots")
+            x.join_chat("coding_bots")
     except:
         pass
 print("\n\nALL CLIENTS STARTED SUCCESSFULLY !\nJoin @SpLBots")
