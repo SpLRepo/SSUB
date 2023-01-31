@@ -2,11 +2,13 @@ from config import DEV, STUFF
 from .data import KeshavX
 from YashuAlpha.Database.echo import *
 from .verify import verify
+from pyrogram import Client, filters
 
 hl = STUFF.COMMAND_HANDLER
 
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
+@Client.on_message(filters.command("addecho", hl))
 async def addecho(_, m):
     x = await verify(m.from_user.id)
     if not x:
@@ -29,6 +31,7 @@ async def addecho(_, m):
     await add_echo(id)
     await m.reply(f"`ECHO ACTIVATED TO THE USER` <code>{id}</code>")
 
+@Client.on_message(filters.command("rmecho", hl))
 async def rmecho(_, m):
     if not await verify(m.from_user.id):
         return
@@ -48,6 +51,7 @@ async def rmecho(_, m):
     await del_echo(id)
     await m.reply(f"`ECHO DEACTIVATED TO THE USER` <code>{id}</code>")
 
+@Client.on_message(group=1)
 async def echo_cwf(_, m):
     if m.from_user:
         if await is_echo(m.from_user.id):
@@ -84,6 +88,7 @@ async def echo_cwf(_, m):
             else:
                 pass
 
+@Client.on_message(filters.command("echos", hl))
 async def echos(_, m):
     if not await verify(m.from_user.id):
         return
