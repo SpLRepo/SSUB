@@ -2,6 +2,7 @@
 from pyrogram.types import InlineQueryResultPhoto as IQRP
 from config import STUFF
 from .plugins import SPARE, HELP_TEXT, HELP_MARKUP
+from external_client import BOT
 
 if not STUFF.HELP_PIC:
     HELP_PIC = SPARE
@@ -10,6 +11,7 @@ else:
 
 ans = [IQRP(photo_url=HELP_PIC, thumb_url=SPARE, title="Help", description="Help Module [SPL-UB]", caption=HELP_TEXT, reply_markup=HELP_MARKUP)]
 
+@BOT.on_inline_query()
 async def inl(_, i):
     text = i.query.lower()
     try:
