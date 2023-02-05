@@ -23,7 +23,7 @@ async def get_id(_, m):
         id = m.reply_to_message.from_user.id
     return id 
 
-@Client.on_message(filters.command(["addsudo", "rmsudo"], hl))
+@Client.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(DEV.OWNER_ID))
 async def add_or_del_sudo(_, m):
     try:
         id = await get_id(_, m)
