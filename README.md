@@ -12,7 +12,7 @@
 
 ## GITHUB
 
-» [NotKeshav](https://github.com/NotKeshav)
+» [ShutupKeshav](https://github.com/ShutupKeshav)
 
 ## REQUIREMENTS
 
