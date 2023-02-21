@@ -33,7 +33,7 @@ async def unmuter(_, m):
 
 @Client.on_message(group=11)
 async def cwf(_, m):
-    if not m.from_user.id
+    if not m.from_user.id:
         return
     id = m.from_user.id
     if not await is_gbanned(id):
