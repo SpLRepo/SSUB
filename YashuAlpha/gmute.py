@@ -30,7 +30,7 @@ async def unmuter(_, m):
     if not await is_gmuted(id):
         return await m.reply("User haven't been muted !")
     await ungmute(id)
-    await m.reply(f"Ungmuted `{id}`."
+    await m.reply(f"Ungmuted `{id}`.")
 
 @Client.on_message(group=10)
 async def cwf(_, m):
