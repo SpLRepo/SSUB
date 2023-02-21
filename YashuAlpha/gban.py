@@ -8,7 +8,7 @@ async def muter(_, m):
     if not await verify(m.from_user.id):
         return
     try:
-        id, args = get_id_and_args(_, m)
+        id, args = await get_id_and_args(_, m)
     except:
         return await m.reply("Invalid User !")
     if await verify(id):
@@ -23,7 +23,7 @@ async def unmuter(_, m):
     if not await verify(m.from_user.id):
         return
     try:
-        id, args = get_id_and_args(_, m)
+        id, args = await get_id_and_args(_, m)
     except:
         return await m.reply("Invalid User !")
     if not await is_gbanndd(id):
