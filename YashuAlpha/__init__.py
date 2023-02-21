@@ -13,6 +13,15 @@ async def get_id_and_args(_, m):
         else:
             args = None
     else:
+        if len(m.command) > 1:
+            if len(m.command) < 3:
+                args = None
+            else:
+                args = m.text.split(None, 2)[2]
+            try:
+                id = int(m.text.split()[1])
+            except:
+                pass
         if m.entities:
             if len(m.command) < 3:
                 args = None
