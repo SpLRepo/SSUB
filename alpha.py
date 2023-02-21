@@ -84,12 +84,19 @@ if TOKENS.STRING_SESSION_10:
     END10.start()
     print("\nEND10 STARTED !")
 CLIENTS = [END2, END3, END4, END5, END6, END7, END8, END9, END10]
+a = 0
 for x in CLIENTS:
     try:
         if x:
+            a += 1
             x.join_chat("splbots")
             x.join_chat("coding_bots")
     except:
         pass
-print("\n\nALL CLIENTS STARTED SUCCESSFULLY !\nJoin @SpLBots")
+
+if a == 1:
+    txt = "1 CLIENT"
+else:
+    txt = f"{a} CLIENTS"
+print(f"\n\n{txt} STARTED SUCCESSFULLY !\nJoin @SpLBots")
 idle()
