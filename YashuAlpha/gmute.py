@@ -17,7 +17,7 @@ async def muter(_, m):
     if await is_gmuted(id):
         return await m.reply("User is already gmuted !")
     await gmute(id)
-    await m.reply(f"Gmuted `{id}`."
+    await m.reply(f"Gmuted `{id}`.")
 
 @Client.on_message(filters.command("ungmute", hl))
 async def unmuter(_, m):
