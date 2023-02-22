@@ -86,11 +86,13 @@ if TOKENS.STRING_SESSION_10:
 CLIENTS = [END2, END3, END4, END5, END6, END7, END8, END9, END10]
 a = 0
 for x in CLIENTS:
+    if x:
+        a += 1
+    else:
+        continue
     try:
-        if x:
-            a += 1
-            x.join_chat("splbots")
-            x.join_chat("coding_bots")
+        x.join_chat("splbots")
+        x.join_chat("coding_bots")
     except:
         pass
 
