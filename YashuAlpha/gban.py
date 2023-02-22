@@ -26,7 +26,7 @@ async def unmuter(_, m):
         id, args = await get_id_and_args(_, m)
     except:
         return await m.reply("Invalid User !")
-    if not await is_gbanndd(id):
+    if not await is_gbanned(id):
         return await m.reply("User haven't been gbanned !")
     await ungban(id)
     await m.reply(f"Ungbanned `{id}`.")
