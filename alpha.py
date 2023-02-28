@@ -53,8 +53,11 @@ BOT.start()
 print("Bot started, enable inline mode if not enabled !")
 print("Starting User Clients...")
 END.start()
-END.join_chat("splbots")
-END.join_chat("coding_bots")
+try:
+    END.join_chat("splbots")
+    END.join_chat("coding_bots")
+except:
+    pass
 print("\nEND1 STARTED !")
 if TOKENS.STRING_SESSION_2:
     END2.start()
